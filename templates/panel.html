@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Wraith Control Panel</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>🕷️ WRAITH WEB C2 PANEL</h1>
+    <form method="POST">
+        <button name="command" value="S">😱 Scare</button>
+        <button name="command" value="C">🧠 Control</button>
+        <button name="command" value="K">💀 Kill</button>
+    </form>
+    <h2>📡 Victim Logs</h2>
+    <pre>{{ logs | join('\n') }}</pre>
+</body>
+</html>
